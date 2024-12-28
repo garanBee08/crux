@@ -18,7 +18,7 @@ body {
     margin-top: 120px;
     padding-bottom: 30px;
     width: 300px;
-    height: 300px;
+    height: 320px;
     background-color: rgba(35, 33, 53, 0.1); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -35,13 +35,13 @@ body {
 
 #login {
     margin-bottom: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-#username, #password {
+input {
     width: 220px;
     height: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     border: none;
     padding-bottom: 12px;
     padding-left: 30px;
@@ -52,7 +52,7 @@ body {
     font-size: 16px;
 }
 
-#username:focus, #password:focus {
+input:focus {
     outline: none;
     border-bottom: 2px solid rgb(60, 60, 197);
     transition: 0.1s ease;
@@ -60,6 +60,20 @@ body {
 
 input::placeholder {
     color:darkgrey;
+}
+
+.input_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.icon {
+    position: absolute;
+    left: 4px;
+    top: 1px;
 }
 
 #btn_login {
@@ -81,4 +95,14 @@ input::placeholder {
 
 #register {
     color: cornflowerblue;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.error.show {
+    visibility: visible; 
 }
