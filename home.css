@@ -1,0 +1,129 @@
+body {
+    overflow-x: hidden;
+    display: flex;
+    height: 5000px;
+    padding-left: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+  
+    background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(203, 82, 219, 0.301);
+  
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
+}
+
+.task-components {
+    width: calc(100% - 500px);
+    padding-top: 5px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+button {
+    border: none;
+}
+  
+.c-button {
+    background: linear-gradient(140deg, rgba(133, 76, 180, 1) 0%, rgb(74, 11, 104, 1) 100%);
+    border-radius: 40px;
+    font-size: 16px;
+    text-align: left;
+    width: 170px;
+    padding: 11px 0px 11px 0px;
+    border: 4px solid rgb(36, 35, 35) !important;
+    border-style: outset;
+    box-shadow: -6px -5px 18px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+  
+.c-button .c-main {
+    border-radius: 40px;
+    color: rgba(255, 255, 255, 1);
+    padding: 11px 36px 12px 2px;
+    box-shadow: inset 0px 0px 5px rgba(27, 14, 34, 0);
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+}
+  
+.c-ico .c-blur {
+    background: linear-gradient(318deg, rgba(133, 76, 180, 1) 0%, rgb(74, 11, 104, 1) 100%);
+    border-radius: 100%;
+    margin-left: 0;
+    padding: 8px 18px;
+    filter: blur(1px);
+    text-align: center;
+}
+  
+.c-ico {
+    position: relative;
+    margin-right: 20px;
+}
+  
+.c-ico .ico-text {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+  
+.c-button .c-main:hover {
+    box-shadow: inset 0px 0px 9px rgba(32, 20, 34, 0.61);
+    border: 1px solid rgba(26, 26, 26,0.5);
+    color: rgb(219, 202, 228);
+}
+  
+
+.task-column {
+    width: calc(100% / 3);
+    height: 900px;
+}
+
+.tasks-container {
+    display: flex;
+}
+
+.todo-task-container {
+    background-color: rgba(138, 93, 180, 0.39);
+}
+
+.ongoing-task-container {
+    background-color: rgba(180, 93, 151, 0.39);
+}
+
+.completed-task-container {
+    background-color: rgba(99, 93, 180, 0.39);
+}
+
+.side-content {
+    position: fixed;
+    background-color: rgb(145, 122, 92, 0.1);
+    right: 0px;
+    bottom: 0px;
+    top: 90px;
+    width: 400px;
+    z-index: 100;
+
+}

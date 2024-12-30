@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body class="container">
+
+    <nav class="navbar"> 
+        <div class="logo">
+            <button id="logo_button" onclick="location.replace('landing.html');">
+                <span class="actual-text">&nbsp;GLENN&nbsp;</span>
+                <span aria-hidden="true" id="logo_text">&nbsp;GLENN&nbsp;</span>
+            </button>
+        </div>
+        <div class="nav_options_container">
+            <div class="nav_options">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="tasks.html">My Tasks</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div id="logout_btn_container">
+                <button class="logout_btn" onclick="location.replace('login.html');">
+                    <div class="sign">
+                      <svg viewBox="0 0 512 512">
+                        <path
+                          d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="text">Logout</div>
+                </button>
+            </div>
+        </div>   
+    </nav>
+    
+    <div class="task-components">
+        <div class="task-header">
+            <div>
+                <h2 class="my-task-text"> My Tasks </h2>
+            </div>
+            <div class="add-task-btn">
+                <button class="c-button">
+                    <span class="c-main">
+                        <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                        Add Task
+                    </span>
+                  </button>
+            </div>
+        </div>
+        <div class="tasks-container">
+            <div class="task-column todo-task-container">
+                <div class="task-type">
+                    <p>To-Do</p>
+                </div>
+                <div class="todo-column">
+                    
+                </div>
+            </div>
+            <div class="task-column ongoing-task-container">
+                <div class="task-type">
+                    <p>On Going</p>
+                </div>
+                <div class="ongoing-column">
+                    
+                </div>
+            </div>
+            <div class="task-column completed-task-container">
+                <div class="task-type">
+                    <p>Completed</p>
+                </div>
+                <div class="completed-column">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="side-content">
+        <div class="calendar">
+            <h2>Calendar</h2>
+        </div>
+        <div class="progress">
+            
+        </div>
+    </aside>
+    
+    
+</body>
+</html>

@@ -1,0 +1,182 @@
+body {
+    padding-top: 90px;
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    flex-wrap: nowrap;
+} 
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-top: 3px;
+}
+
+#logo_button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+  
+#logo_button {
+    --border-right: 6px;
+    --text-stroke-color: rgb(255, 255, 255);
+    --animation-color: 	rgb(133, 76, 180);
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--text-stroke-color);
+}
+  
+#logo_text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+  
+#logo_button:hover #logo_text {
+    width: 100%;
+    filter: drop-shadow(0 0 13px var(--animation-color));
+}
+  
+.nav_options_container {
+    display: flex;
+    justify-content: space-between;
+    width: 465px;
+    margin-right: 30px;
+}
+
+.nav_options {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav_options ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav_options a {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: bold;
+    padding: 20px 30px 15px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.nav_options a:hover,
+.nav_options a:active {
+    color:  rgb(133, 76, 180); 
+    border-bottom: 6px solid rgb(133, 76, 180);
+}
+
+#logout_btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    padding-bottom: 15px;
+}
+
+/* From Uiverse.io by MUJTABA201566 */ 
+.logout_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    background-color: white;
+  }
+  
+  .sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 15px;
+  }
+  
+  .sign svg path {
+    fill: black;
+  }
+
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    transition-duration: 0.3s;
+  }
+  
+  .logout_btn:hover {
+    box-shadow: 2px 2px 10px rgb(133, 76, 180, 1.999);
+    background-color: rgb(133, 76, 180, 1.999);
+    width: 110px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+  }
+  
+  .logout_btn:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    padding-left: 8px;
+  }
+  
+  .logout_btn:hover .sign svg path {
+    fill: white;
+  }
+  
+  .logout_btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+}
+  .logout_btn:active {
+    transform: translate(2px, 2px);
+}
